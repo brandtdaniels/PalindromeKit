@@ -4,5 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "MyPackage"
+  name: "PalindromeKit",
+  products: [
+    .library(
+      name: "PalindromeKit",
+      targets: ["PalindromeKit"]),
+  ],
+  targets: [
+    .target(name: "PalindromeKit"),
+    .testTarget(name: "PalindromeKitTests", dependencies: ["PalindromeKit"])
+  ]
 )
